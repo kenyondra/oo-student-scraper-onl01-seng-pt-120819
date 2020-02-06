@@ -42,7 +42,7 @@ class Scraper
       student[:bio] = page.css("div.description-holder p").text
       student
   end
-  end
+  
 
 end
 

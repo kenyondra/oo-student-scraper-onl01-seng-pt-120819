@@ -8,8 +8,8 @@ class Scraper
     students = []
     
     page.css("div.student-card").each do |student|
-      name = student.css(".student-name").text
-      location = student.css(".student-location").text 
+      name = student.css("h4.student-name").text
+      location = student.css("p.student-location").text 
       profile_url = student.css("a").attribute("href").value 
       student_info = { :name => name, :location =>, :profile_url => profile_url}
       students << student_info
